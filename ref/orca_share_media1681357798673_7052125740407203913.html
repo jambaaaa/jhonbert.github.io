@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Mobile View Compatibility-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=0.4">
+        <title>Joshua Mark A. Castillo 2CPE</title>
+
+        <!--BackUP CSS-->
+        <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1uxPFBuI946YUtxRXUlwe4qgqe5et8cDa"/>
+        <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1-Uh_4iDt4p9NjkobgHD13nC7AsUWW2vp">
+        
+        <!--Icons Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            /*BUTTON CSS*/
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+            * {
+                margin: 0;
+                padding: 0;
+                outline: none;
+                border: none;
+                text-decoration: none;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+
+            body {
+                background-color: #555555;
+            }
+
+            .logo-Main {
+                text-align: center;
+                background: #e6e6e6;
+                display: flex;
+                transition: all 0.5s ease;
+                padding-left: 19px;
+            }
+
+            .logo-Main img {
+                width: 120px;
+                height: 120px;
+
+            }
+
+            .logo-Main span {
+                font-weight: bold;
+                padding: 15px;
+                font-size: 18px;
+                text-transform: uppercase;
+                
+            }
+
+            .logo-Main span h1 {
+                position: relative;
+                font-size: 50px;
+
+                animation-name: colorChangeAnim;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease;
+            }
+
+            @keyframes colorChangeAnim {
+                0% {
+                    color: #0073ff;        
+                }
+                50% {
+                    color: #000000;
+                }
+                100% {
+                    color: #0073ff;
+                }
+            }
+
+            a {
+                position: relative;
+                color: #000000;
+                font-size: 25px;
+                display: table;
+                width: 350px;
+                padding: 10px;
+                padding-bottom: 20px;
+                padding-right: 0px;
+
+            } 
+
+            a i {
+                margin-left: 30px;
+            }
+
+            a span {
+                left: -30px;
+            }
+
+            .row:hover {
+                transition: all .8s ease;
+                background-color: #eee;
+            }
+
+            #logOUT {
+                position: relative;
+                margin-top: auto;
+                background-color: #555555;
+            }
+
+            .leaveBTN {
+                position: relative;
+                color: rgb(255, 255, 255);
+                font-size: 25px;
+                display: table;
+                width: 350px;
+                padding: 10px;
+                padding-bottom: 20px;
+                margin-left: 0px;
+            }
+
+            .fas {
+                position: relative;
+                width: 70px;
+                height: 40px;
+                top: 14px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            nav {
+                position: fixed;
+                top:0;
+                bottom: 0;
+                height: auto;
+                width: 152px;
+                min-width: 152px;
+                min-height: 655px;
+
+                left:0;
+                background: #e6e6e6;
+                overflow: hidden;
+                transition: width 0.2s linear;
+
+                box-shadow: 0 20px 35px rgba(0, 0, 0, 0.20);
+
+                z-index: 12;
+            }
+
+            .nav-item {
+                position:relative;
+                top: 12px;
+                margin-left: 80px;
+            }
+
+            .nav-item-logoTEXT{
+                position:relative;
+                top: 12px;
+                margin-left: 40px;
+            }
+
+            a:hover {
+                transition: all 0.5s ease;
+                color: #1375ee;
+            }
+
+            nav:hover {
+                width: 350px;
+                transition: all 0.5s ease;
+            }
+
+            /*TABS CSS*/
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+            .Home-tabPanel {
+                background-color: #363636;
+
+                position: absolute;
+
+                left: 152px;
+                width: 1213px;
+                height: 1200px;
+
+                font-size: 25px;
+                color: white;
+
+                z-index: 0;
+                animation: transIN 0.75s;
+            }
+
+
+            /*TABS TRANSITIONS*/
+            @keyframes transIN {
+                from {
+                    opacity: 0;
+                    transform: translateX(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .Profile-tabPanel {
+                background-color: #363636;
+
+                position: absolute;
+
+                left: 152px;
+                width: 1213px;
+                height: 1200px;
+
+                font-size: 25px;
+                color: white;
+
+                z-index: 3;
+            }
+
+            .Home, .Profile {
+                padding-top: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                background-color: rgba(0, 0, 0, 0.35);
+
+            }
+
+            /*tab variation #1*/
+            .home-tab1 {
+                background-color: #7e7e7e;
+
+                position: relative;
+                width: 400px;
+                height: 400px;
+                float:left;
+                cursor: pointer;
+
+                margin: 25px;
+
+                text-align: center;
+
+                border-radius: 15px 15px 15px 15px;
+                overflow: hidden;
+
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                transition: transform .2s;
+            }
+
+            .home-tab1TXT {
+                position: relative;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.35);
+            }
+
+            .home-tab1TXT h2{
+                font-weight: bold;
+                font-size: 24px;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .home-tab1IMG img {
+                position: relative;
+                bottom: 36px;
+                z-index: 0;
+
+                width: 401px;
+                height: 401px;
+            }
+
+            /*tab variation #2*/
+            .home-tab2 {
+                background-color: #7e7e7e;
+
+                position: relative;
+                width: 175px;
+                height: 175px;
+                float:left;
+                cursor: pointer;
+
+                margin: 25px;
+
+                text-align: center;
+
+                border-radius: 15px 15px 15px 15px;
+                overflow: hidden;
+
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                transition: transform .2s;
+            }
+
+            .home-tab2TXT {
+                position: relative;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.35);
+            }
+
+            .home-tab2TXT h2{
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .home-tab2IMG img {
+                position: relative;
+                bottom: 36px;
+                z-index: 0;
+
+                width: 175px;
+                height: 175px;
+            }
+
+            /*tab variation #3*/
+            .home-tab3 {
+                background-color: #7e7e7e;
+
+                position: relative;
+                width: 500px;
+                height: 280px;
+                float:left;
+                cursor: pointer;
+
+                margin: 25px;
+
+                text-align: center;
+
+                border-radius: 15px 15px 15px 15px;
+                overflow: hidden;
+
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                transition: transform .2s;
+            }
+
+            .home-tab3TXT {
+                position: relative;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.35);
+            }
+
+            .home-tab3TXT h2{
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .home-tab3IMG img {
+                position: relative;
+                bottom: 36px;
+                z-index: 0;
+
+                width: 500px;
+                height: 290px;
+            }
+
+            .home-tab3PAR p {
+                position: relative;
+                top: 1px;
+                bottom: 36px;
+                z-index: 0;
+
+                padding: 5px;
+                font-weight: 500;
+                font-size: 50px;
+                font-family: "Poppins", sans-serif;
+            }
+
+            /*Profile Tab Panel*/
+            /*For Cover Only!*/
+            .profile-tab3 {
+                background-color: #3d3d3d;
+
+                position: relative;
+                width: 1100px;
+                height: 480px;
+                float:left;
+
+                margin: 25px;
+
+                text-align: center;
+
+                border-radius: 15px 15px 15px 15px;
+                overflow:hidden;
+                
+
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+                transition: transform .2s;
+            }
+
+            .profile-tab3:oveflow {
+                -webkit-filter: blur(10px);
+                filter: blur(10px);
+            }
+
+            .profile-tab3TXT {
+                position: relative;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.35);
+                padding-top: 10px;
+            }
+
+            .profile-tab3TXT h2{
+                font-weight: bold;
+                font-size: 74px;
+                font-family: "Poppins";
+            }
+
+            .profile-tab3IMG img {
+                position: relative;
+                bottom: 166px;
+                z-index: 0;
+
+                width: 100%;
+                height: 900px;
+
+                
+            }
+
+            .profile-tab3PAR p {
+                position: relative;
+                top: 1px;
+                bottom: 36px;
+                z-index: 0;
+
+                padding: 5px;
+                font-weight: 500;
+                font-size: 50px;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .tab3-Info {
+                background-color: #474747;
+
+                position: relative;
+                width: 500px;
+                height: 360px;
+                float:left;
+                top: 0px;
+
+                margin: 25px;
+
+                text-align: center;
+
+                border-radius: 15px 15px 15px 15px;
+                overflow:hidden;
+                
+                transition: all 0.2s ease;
+            }
+
+            .tab3-Info h2 {
+                font-size: 45px;
+                font-family: "Poppins", sans-serif;
+                justify-content: center;
+
+                padding: 10px;
+                height: 400px;
+
+                background-color: rgba(0, 0, 0, 0.35); 
+                position: relative;
+
+                z-index: 3;
+            }
+
+            .tab3-Info img {
+                bottom: 500px;
+                position: relative;
+
+                z-index: 0;
+            }
+
+            .gallerySlide {
+                max-width: 400%;
+                bottom: 150px;
+            }
+
+            .gallerySlide .mySlides {
+                width: 100%;
+                position: relative;
+                bottom: 450px;
+
+                z-index: 0;
+            }
+
+            /*TAB VAR 4*/
+            .profile-tab1 {
+                background-color: #7e7e7e;
+
+                position: absolute;
+                top: 38%;
+                left: 5%;
+
+                width: 300px;
+                height: 300px;
+                float:left;
+                z-index: 4;
+
+                margin: 25px;
+
+                text-align: center;
+
+                border-radius: 50%;
+                border: 5px solid #474747;
+                overflow: hidden;
+                transition: all 0.2s ease;
+
+            }
+
+            .profile-tab1TXT {
+                position: relative;
+                z-index: 1;
+                background-color: rgba(0, 0, 0, 0.35);
+            }
+
+            .profile-tab1TXT h2{
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .profile-tab1IMG img {
+                position: relative;
+                bottom: 9px;
+                right: 5px;
+                z-index: 0;
+
+                width: 301px;
+                height: 301px;
+
+            }
+
+
+            /*TAB 1-2-3 hover*/
+
+            #Parent.home-tab1:hover {
+                transform: scale(1.05);
+            }
+
+            #Parent.home-tab2:hover {
+                transform: scale(1.1);
+            }
+
+            #Parent.home-tab3:hover {
+                transform: scale(1.05);
+            }
+
+            /*SUB TAB 1-2-3 hover*/
+
+            #ZoomSubTab:hover {
+                transform: scale(1.05);
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="containerBTN">
+                <nav>
+                    <ul>
+                        <li id="button" onclick="showPanel(0, '#1375ee')">
+                            <a href="#" class="logo-Main">
+                                <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/339780630_599776915142170_9143118813722028692_n.png?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeEY5WM7GF8PSvBJxaOzs66ALFdwQUmvpv8sV3BBSa-m__RlhWjSVOUeA_MnL1d3QHyuB_TE4pFdmbIODkdInodM&_nc_ohc=HTq4eCPIaQQAX-AAj66&_nc_ht=scontent.fmnl17-1.fna&oh=03_AdSfm-jkWr0_HVO75nwstvHhzusE9iewOEliA-GuRxIMaQ&oe=64551D19">
+                                <span class="nav-item-logoTEXT">
+                                    <h1>NEXUS</h1>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="row" id="button" onclick="showPanel(1, '#1375ee')">
+                            <a href="#">
+                                <i class="fas fa-user"></i>
+                                <span class="nav-item">Profile</span>
+                            </a>
+                        </li>
+                        <li class="row" id="button" onclick="showPanel(2, '#1375ee')">
+                            <a href="#">
+                                <i class="fas fa-folder"></i>
+                                <span class="nav-item">Portfolio</span>
+                            </a>
+                        </li>
+                        <li class="row" id="button" onclick="showPanel(3, '#1375ee')">
+                            <a href="#" id="button">
+                                <i class="fas fa-globe"></i>
+                                <span class="nav-item">Social Links</span>
+                            </a>
+                        </li>
+                        <li id="logOUT" class="row" id="button" onclick="location.href='https://google.com'">
+                            <a href="#" class="leaveBTN">
+                                <i class="fas fa-power-off"></i>
+                                <span class="nav-item">Leave</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--SECOND PART TAB PANELS-->
+            <div class="Home-tabPanel">
+                <div class="Home-tabPanelContents">
+                    <div class="Home">
+                        <h1>HOME</h1>
+    
+                        <!--TAB1 VAR-->
+                        <div id="Parent" class="home-tab1">
+                            <div class="home-tab1TXT">
+                                <h2>After Hours</h2>
+                            </div>
+                            <div class="home-tab1IMG">
+                                <img src="Https://images.genius.com/9d35a5dff10090e6c1d5e077932cea99.1000x1000x1.jpg">
+                            </div>
+                        </div>
+    
+                        <div id="Parent" class="home-tab1">
+                            <div class="home-tab1TXT">
+                                <h2>She loves me not ep. 1</h2>
+                            </div>
+                            <div class="home-tab1IMG">
+                                <img src="https://images.genius.com/14491d4d9e931e3fcbad8a990113b86d.1000x1000x1.jpg">
+                            </div>
+                        </div>
+    
+                        <!--TAB2 VAR-->
+                        <div id="Parent" class="home-tab2">
+                            <div class="home-tab2TXT">
+                                <h2>OMG</h2>
+                            </div>
+                            <div class="home-tab2IMG">
+                                <img src="https://cdn.albumoftheyear.org/album/569663-omg-1.jpg">
+                            </div>
+                        </div>
+                        <div id="Parent" class="home-tab2">
+                            <div class="home-tab2TXT">
+                                <h2 style="font-size: 18px;">Bulakenyong Frieza</h2>
+                            </div>
+                            <div class="home-tab2IMG">
+                                <img style="height: 200px;width:auto;bottom: 60px;"src="6EelB_.gif">
+                            </div>
+                        </div>
+    
+                        <!--TAB3 VAR-->
+                        <div id="Parent" class="home-tab3">
+                            <div class="home-tab3TXT">
+                                <h2>Haikyuu! To The Top</h2>
+                            </div>
+                            <div class="home-tab3IMG">
+                                <img src="https://i.pinimg.com/originals/7f/12/88/7f12888aca672b7e23f8a43048622297.gif">
+                            </div>
+                        </div>
+                        <div id="Parent" class="home-tab3">
+                            <div class="home-tab3TXT">
+                                <h2>Hobbies & Likes</h2>
+                            </div>
+                            <div class="home-tab3PAR">
+                                <p>This section contains most of the things I love.</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+    
+            <div class="Home-tabPanel">
+                <div class="Profile-tabPanelContents">
+                    <div class="Profile">
+                        <h1>PROFILE</h1>
+                        <!--TAB3 VAR-->
+                        <div id="Parent" class="profile-tab3" style="margin-bottom: 0;">
+                            
+                            <div class="profile-tab3TXT">
+                                <h2>Love will tear us apart</h2>
+                            </div>
+                            <div class="profile-tab3IMG">
+                                <img src="https://img.apmcdn.org/5c1e5160869b499d62daef8e8dd602ccab3acdb2/square/6df868-20190626-joy-division-unknown-pleasures.jpg">
+                            </div>
+                        </div>
+                        
+                        <div id="ZoomSubTab" class="profile-tab1">
+                            <div class="profile-tab1TXT">
+                                
+                            </div>
+                            <div class="profile-tab1IMG">
+                                <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.6435-9/120372698_3534841566580481_4267327020089227280_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=174925&_nc_eui2=AeGVqDZEMUB-OyZ6d2bK2dup9Rah-TlwLx_1FqH5OXAvH_AGppLv7ni9a3y8YPEAUtHhPjl8mlO7Ae2s_VEfaJ3n&_nc_ohc=KHhS9jtRme8AX9-R3OA&_nc_ht=scontent.fmnl17-1.fna&oh=00_AfCKxecFgD4zMoVKsTMXxSzOrmpOZcCZC7jn2mOLijpMgw&oe=6454EA9C">
+                            </div>
+                        </div>
+    
+                        <div id="Parent" class="profile-tab3" style="height: 590px;margin-top: 0;">
+                            <div class="profile-tab3PAR">
+    
+                                <div class="tab3-Info" style="top:0px;height: 160px;width: 1050px;">
+                                    <h2 style="padding: 15px;font-size: 90px;text-align: right;">Joshua Castillo</h2>
+                                </div>
+    
+                                <div id="ZoomSubTab" class="tab3-Info" style="margin-top: 0;">
+                                    <h2 style="padding-top: 75px;">Hey! Thanks for stopping by at my Website!</h2>
+                                    <img src="https://media1.tenor.com/images/83c51c0e7a340e6b3d30de2e9e2a1393/tenor.gif?itemid=18658050">
+                                </div>
+    
+                                <div id="ZoomSubTab" class="tab3-Info" style="margin-top: 0;">
+                                    <h2 style="font-size: 25px;">Gallery Preview</h2>
+                                    <div class="gallerySlide">
+                                        <img class="mySlides" src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/340254523_175912468606480_1489774702588577361_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=WwegEnUsoCsAX_WUr0N&_nc_oc=AQnrdZhB7P3gPbxtr8YQ-Zj34nmgw1UE1xTYsoaF1e3jKaA_JLYY24OlGJAQsu_lsDU&_nc_ht=scontent.fmnl17-1.fna&oh=00_AfC0_SJ9ue8k1PVHr5f4m75dIlYc9tLNArceLQ4YAnsw8Q&oe=6439075F">
+                                        <img class="mySlides" src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t39.30808-6/333581741_1662761190838619_1436919645313681700_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=L-jeaeux674AX9DRLXo&_nc_ht=scontent.fmnl17-4.fna&oh=00_AfCQRb3yxS_a9CA6EIF-q2sKziS7sFwyZEDeQEBju7F3lQ&oe=64391FC5">
+                                        <img class="mySlides" src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t39.30808-6/329640336_554476456623982_384054971472740686_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=SX3KdD2fv7oAX8DBRnM&_nc_ht=scontent.fmnl17-4.fna&oh=00_AfDfSnEKEyBDzWdLuPfLp9Pa87Z6jHu8Avm3xfeW_LGypg&oe=64397838">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="Home-tabPanel" style="height: auto;">
+                <div class="Home-tabPanelContents">
+                    <div class="Home" >
+                        <h1>PORTFOLIO <sup style="font-size: 14px; font-weight: normal;">(still under development)</sup></h1>
+                        <div id="Parent" class="home-tab1" style="position: relative;height: 500px;top:50%;left: 10%;">
+                            <div style="height: 100%;padding: 15px;" class="home-tab1TXT">
+                                <h2 style="font-size: 40px;"></h2>
+                            </div>
+                            <div class="home-tab1IMG">
+                                <img style="height: auto;position:relative;bottom:600px;"src="https://c.tenor.com/XzxoOpgJfqEAAAAd/tenor.gif">
+                            </div>
+                        </div>
+
+                        <div id="Parent" class="home-tab1" style="position: relative;height: 500px;top:50%;left: 10%;">
+                            <div style="height: 100%;padding: 15px;" class="home-tab1TXT">
+                                <h2 style="font-size: 40px;"></h2>
+                            </div>
+                            <div class="home-tab1IMG">
+                                <img style="height: 600px;width: auto;position:relative;right: 50px;bottom:580px;"src="https://media.tenor.com/images/dd685952206c17f5b0687004833facff/tenor.gif">
+                            </div>
+                        </div>
+
+                        <div id="Parent" class="home-tab1" style="position: relative;height: 600px;width: auto;top:50%;">
+                            <div style="padding: 15px;" class="home-tab1TXT">
+                                <h2 style="font-size: 40px;">NEXUS - WEB APP DEV ACTIVITY</h2>
+                            </div>
+                            <div class="home-tab1IMG">
+                                <img style="height: 600px;width: 1100px;position:relative;bottom: 90px;"src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/339944875_3545616515762000_8373538891303887258_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHXGSUVBntFFwx2rhEiclD52plZaFIYD1HamVloUhgPUWiG4WrWE-7jCHDy_dyn3jJcP44N62lgnDxdDsTGmv5d&_nc_ohc=XL5WVAa9b9EAX-WN3PK&_nc_oc=AQlz8gAI9EbFe1cfCaBkGEyMQx4C8YNjDqLb4u-opgp2J7HUlA8MP8HpT1oD9W5XJjw&_nc_ht=scontent.fmnl17-1.fna&oh=03_AdSTqYu0rNe6jrJ7DN1JimOdBnfccsacdhV80y55IYLQgA&oe=64558F4A">
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+    
+            <div class="Home-tabPanel">
+                <div class="Home-tabPanelContents">
+                    <div class="Home">
+                        <h1>SOCIAL LINKS</h1>
+                        
+                        <div id="Parent" class="home-tab1" style="height: 300px;width: 300px;" onclick="window.open('https://facebook.com/vjoshm')"  rel="noopener noreferrer">
+                            <div class="home-tab1TXT">
+                                <h2>FACEBOOK</h2>
+                            </div>
+                            <div class="home-tab1IMG">
+                                <img style="height: 350px;width:350px;position: relative; right:25px;bottom: 45px;" src="https://www.mountainstatesgenetics.org/wp-content/uploads/sites/257/2019/07/680331_official-facebook-icon-png.jpg.png">
+                            </div>
+                        </div>
+                        <div id="Parent" class="home-tab1" style="height: 300px;width: 300px;" onclick="window.open('https://Instagram.com/v.joshm')"  rel="noopener noreferrer">
+                            <div class="home-tab1TXT">
+                                <h2>INSTAGRAM</h2>
+                            </div>
+                            <div class="home-tab1IMG">
+                                <img style="height: 350px;width:350px;position: relative; right:25px;bottom: 55px;" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+                            </div>
+                        </div>
+                        <div id="Parent" class="home-tab1" style="height: 300px;width: 300px;" onclick="window.open('https://Twitter.com/@Rmuruu')"  rel="noopener noreferrer">
+                            <div class="home-tab1TXT">
+                                <h2>TWITTER</h2>
+                            </div>
+                            <div class="home-tab1IMG">
+                                <img style="height: 500px;width:500px;position: relative; right:95px;bottom: 135px;" src="https://bizzexpose.co.za/wp-content/uploads/2018/04/twitter.png">
+                            </div>
+                        </div>
+
+                        <div id="Parent" class="home-tab3" style="width: 1100px; height: auto;">
+                            <div class="home-tab3TXT">
+                                <h2>SOCIAL MEDIA PLATFORM LINKS</h2>
+                            </div>
+                            <div class="home-tab3PAR">
+                                <p>Follow & Message me for any Web Development concerns.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}    
+                x[myIndex-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        </script>
+        <script>
+            var tabButtons = document.querySelectorAll(".container .containerBTN #button")
+            var tabPanels = document.querySelectorAll(".container .Home-tabPanel")
+
+            function showPanel(panelIndex, colorCode) {
+
+                
+                tabButtons.forEach(function(node) {
+                    node.style.backgroundColor="";
+                    node.style.color="";
+                });
+                tabButtons[panelIndex].style.backgroundColor=colorCode;
+                tabButtons[panelIndex].style.color="white";
+                tabPanels.forEach(function(node) {
+                    node.style.display="none";
+                });
+                tabPanels[panelIndex].style.display="block";
+            }
+
+            showPanel(0, "#363636")
+        </script>
+    </body>
+</html>
